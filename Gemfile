@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activerecord'
-gem 'pg'
+gem 'pg', '~> 0.19.0.pre20160904200247'
 
 gem 'rspec'
 

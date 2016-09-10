@@ -12,7 +12,8 @@ namespace :db do
   desc "Create #{APP_NAME} databases"
   task "create" do
     puts "Creating #{APP_NAME} development and test databases if they don't exist..."
-    system("createdb #{DB_NAME} --username #{DB_USERNAME} -w --no-password && createdb #{TEST_DB_NAME} --username #{DB_USERNAME} -w --no-password")
+    system("createdb --username=#{DB_USERNAME} --password=#{DB_PASSWORD} #{DB_NAME}")
+    system("createdb --username=#{DB_USERNAME} --password=#{DB_PASSWORD} #{TEST_DB_NAME}")
   end
 
   desc "Drop #{APP_NAME} databases"
